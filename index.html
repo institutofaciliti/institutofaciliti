@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Instituto Faciliti – Saúde, Gestão e Inovação</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -21,7 +22,7 @@
     .header {
       background: #0057c2;
       color: #fff;
-      padding: 20px 16px 24px;
+      padding: 20px 16px 28px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
       display: flex;
       flex-direction: column;
@@ -30,32 +31,34 @@
     }
 
     .header-logo {
-      width: 90px;
-      height: 90px;
+      width: 110px;
+      height: 110px;
       object-fit: contain;
       margin-bottom: 10px;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 8px;
     }
 
     .header-title {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       font-weight: 700;
       letter-spacing: 0.08em;
+      margin-bottom: 4px;
     }
 
     .header-subtitle {
-      font-size: 0.95rem;
-      margin-top: 6px;
-      opacity: 0.95;
+      font-size: 1.05rem;
     }
 
     .container {
       max-width: 960px;
-      margin: 0 auto;
-      padding: 20px 16px 32px;
+      margin: 20px auto 40px;
+      padding: 0 16px;
     }
 
     .section-title {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 700;
       color: #0057c2;
       margin: 24px 0 12px;
@@ -64,81 +67,44 @@
     }
 
     .card {
-      background: #fff;
-      border-radius: 14px;
-      padding: 18px 16px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-      margin-bottom: 12px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px 20px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+      margin-bottom: 8px;
     }
 
-    .card p {
-      font-size: 0.98rem;
-    }
-
-    ul {
+    .card ul {
       margin-left: 18px;
-      margin-top: 4px;
-      font-size: 0.98rem;
     }
 
-    .info-list p {
-      margin-bottom: 4px;
-      font-size: 0.98rem;
-    }
-
-    .contact-box {
-      background: #e8f1ff;
-      border-radius: 14px;
-      padding: 16px;
+    .contact-list {
+      list-style: none;
       margin-top: 6px;
-      border: 1px solid #c7dafc;
     }
 
-    .contact-box p {
-      margin-bottom: 6px;
-      font-size: 0.96rem;
-    }
-
-    .whats {
-      color: #0a7c36;
-      font-weight: 600;
-    }
-
-    .email {
-      color: #0057c2;
-      font-weight: 600;
+    .contact-list li + li {
+      margin-top: 4px;
     }
 
     .footer {
       text-align: center;
       font-size: 0.8rem;
-      color: #777;
-      padding: 12px 0 4px;
+      color: #555;
+      padding: 12px 8px 18px;
     }
 
-    @media (min-width: 768px) {
-      .header {
-        padding: 26px 24px 30px;
-      }
-
-      .header-title {
-        font-size: 1.8rem;
-      }
-
-      .header-subtitle {
-        font-size: 1.05rem;
-      }
-
-      .card {
-        padding: 20px 20px;
-      }
+    .footer span {
+      font-weight: 600;
     }
   </style>
 </head>
+
 <body>
   <header class="header">
     <!-- LOGO DO INSTITUTO -->
     <img src="logo-faciliti.png" alt="Logo Instituto Faciliti" class="header-logo">
+
     <!-- TEXTO DO TOPO -->
     <div>
       <div class="header-title">INSTITUTO FACILITI</div>
@@ -151,9 +117,9 @@
       <h2 class="section-title">Quem Somos</h2>
       <div class="card">
         <p>
-          O Instituto Faciliti atua na área da saúde, gestão e inovação,
-          oferecendo soluções completas para hospitais, clínicas, prefeituras,
-          unidades de saúde, organizações sociais e iniciativas privadas.
+          O Instituto Faciliti atua na área da saúde, gestão e inovação, oferecendo
+          soluções completas para hospitais, clínicas, prefeituras, unidades de saúde,
+          organizações sociais e iniciativas privadas.
         </p>
       </div>
     </section>
@@ -172,27 +138,22 @@
     </section>
 
     <section>
-      <h2 class="section-title">Diferenciais</h2>
-      <div class="card info-list">
-        <p>✔ Equipe com experiência em gestão de saúde pública e privada</p>
-        <p>✔ Foco em eficiência, transparência e resultados</p>
-        <p>✔ Soluções sob medida para cada realidade</p>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="section-title">Contato Institucional</h2>
-      <div class="contact-box">
-        <p><strong>Instituto Faciliti – Saúde, Gestão e Inovação</strong></p>
-        <p class="whats">WhatsApp: (19) 99595-5105</p>
-        <p class="email">E-mail: contato@institutofaciliti.com.br</p>
-        <p>Atendimento para prefeituras, hospitais, clínicas e organizações sociais.</p>
+      <h2 class="section-title">Contato</h2>
+      <div class="card">
+        <p>Entre em contato para parcerias, projetos ou propostas técnicas:</p>
+        <ul class="contact-list">
+          <li><strong>E-mail:</strong> contato@institutofaciliti.org</li>
+          <li><strong>Telefone:</strong> (xx) xxxx-xxxx</li>
+          <li><strong>Cidade:</strong> São João da Boa Vista – SP</li>
+        </ul>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    Instituto Faciliti – Saúde, Gestão e Inovação
+    <span>Instituto Faciliti</span> – Saúde, Gestão e Inovação.
   </footer>
 </body>
-</html>
+  </html>  
+
+    
