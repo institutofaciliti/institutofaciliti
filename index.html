@@ -8,110 +8,105 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #222;
+            background: #f5f7fa;
         }
+
         header {
-            background: #004aad;
+            background: #0057b7;
             color: white;
-            padding: 25px;
-            text-align: center;
-        }
-        nav {
-            background: #022f6b;
-            padding: 12px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 18px;
-            font-size: 17px;
-            font-weight: bold;
-        }
-        .hero {
-            background: url('https://images.unsplash.com/photo-1581091012184-5c65b8d0b9c5?auto=format&fit=crop&w=1350&q=80') center/cover;
-            height: 320px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            font-size: 28px;
-            font-weight: bold;
             padding: 20px;
-            text-shadow: 2px 2px 12px #000;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
         }
+
         .section {
-            padding: 40px 20px;
+            padding: 30px;
             max-width: 900px;
             margin: auto;
-            background: white;
-            margin-top: 25px;
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
+
         h2 {
-            color: #004aad;
+            color: #0057b7;
+            border-left: 5px solid #0057b7;
+            padding-left: 10px;
         }
-        footer {
-            background: #022f6b;
-            color: white;
-            text-align: center;
+
+        .card {
+            background: white;
             padding: 20px;
-            margin-top: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #00000015;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: #e8e8e8;
+            padding: 20px;
+            text-align: center;
             font-size: 14px;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Instituto Faciliti</h1>
-    <p>Saúde • Gestão • Inovação</p>
+    INSTITUTO FACILITI  
+    <br><span style="font-size:14px;">Saúde • Gestão • Inovação</span>
 </header>
 
-<nav>
-    <a href="#">Início</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#servicos">Áreas de Atuação</a>
-    <a href="#contato">Contato</a>
-</nav>
+<div class="section">
 
-<div class="hero">
-    Excelência em Saúde, Tecnologia e Gestão Pública
-</div>
+    <h2>Quem Somos</h2>
+    <div class="card">
+        <p>O Instituto Faciliti atua na área da saúde, gestão e inovação, oferecendo soluções completas para hospitais,
+            clínicas, prefeituras, unidades de saúde, organizações sociais e iniciativas privadas.</p>
+    </div>
 
-<div class="section" id="sobre">
-    <h2>Sobre o Instituto Faciliti</h2>
-    <p>
-        O Instituto Faciliti é uma Organização Social comprometida com a qualidade na gestão da saúde,
-        tecnologia, educação e inovação. Trabalhamos com transparência, responsabilidade e foco em resultados,
-        promovendo impacto positivo na vida das pessoas e no desenvolvimento das cidades.
-    </p>
-</div>
+    <h2>Nossos Serviços</h2>
+    <div class="card">
+        <ul>
+            <li>Gestão hospitalar</li>
+            <li>Consultoria em saúde pública</li>
+            <li>Projetos de inovação e modernização</li>
+            <li>Reestruturação administrativa</li>
+            <li>Treinamentos e capacitações profissionais</li>
+        </ul>
+    </div>
 
-<div class="section" id="servicos">
-    <h2>Áreas de Atuação</h2>
-    <ul>
-        <li>Gestão de Unidades de Saúde</li>
-        <li>Projetos Educacionais</li>
-        <li>Inovação e Tecnologia</li>
-        <li>Consultoria em Gestão Pública</li>
-        <li>Transparência, Compliance e Governança</li>
-    </ul>
-</div>
+    <h2>Missão</h2>
+    <div class="card">
+        <p>Promover saúde com eficiência, transparência e inovação.</p>
+    </div>
 
-<div class="section" id="contato">
+    <h2>Visão</h2>
+    <div class="card">
+        <p>Ser referência nacional em soluções para o setor de saúde.</p>
+    </div>
+
+    <h2>Valores</h2>
+    <div class="card">
+        <ul>
+            <li>Ética</li>
+            <li>Transparência</li>
+            <li>Compromisso</li>
+            <li>Humanização</li>
+            <li>Inovação</li>
+        </ul>
+    </div>
+
     <h2>Contato</h2>
-    <p><strong>Email:</strong> contato@institutofaciliti.org</p>
-    <p><strong>Telefone:</strong> (19) 99595-5105</p>
-    <p><strong>Sede:</strong> São João da Boa Vista – SP</p>
+    <div class="card">
+        <p><strong>E-mail:</strong> contato@institutofaciliti.org</p>
+        <p><strong>WhatsApp:</strong> (19) 99595-5105</p>
+    </div>
+
 </div>
 
 <footer>
-    © 2025 Instituto Faciliti – Todos os direitos reservados.
+    © 2025 Instituto Faciliti – Saúde, Gestão e Inovação
 </footer>
 
 </body>
-  </html>
+</html>
