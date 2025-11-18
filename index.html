@@ -4,29 +4,105 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Instituto Faciliti • Saúde • Gestão • Inovação</title>
+
+  <meta name="description" content="Instituto Faciliti - Organização voltada à gestão de serviços de saúde em parceria com o poder público.">
   <style>
-    body { font-family: Arial; margin: 0; background: #f5f7fb; }
-    header { background: #0b4f6c; padding: 15px; color: white; display: flex; align-items: center; gap: 12px; }
-    header img { height: 55px; border-radius: 6px; }
-    h1 { margin: 0; font-size: 22px; }
-    .sub { font-size: 13px; opacity: 0.9; margin-top: -4px; }
-    .container { padding: 20px; }
-  </style>
-</head>
-<body>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
 
-<header>
-  <img src="f13d25b9-7610-4ef1-9320-78d06753550e.png" alt="Logo Instituto Faciliti">
-  <div>
-    <h1>INSTITUTO FACILITI</h1>
-    <div class="sub">Saúde • Gestão • Inovação</div>
-  </div>
-</header>
+    body {
+      background: #f5f7fb;
+      color: #1f2933;
+      line-height: 1.6;
+    }
 
-<div class="container">
-  <h2>Bem-vindo ao Instituto Faciliti</h2>
-  <p>Site institucional oficial.</p>
-</div>
+    header {
+      background: #0b4f6c;
+      color: #ffffff;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
 
-</body>
-</html>
+    header img {
+      height: 55px;
+      width: auto;
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 4px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .sub {
+      font-size: 13px;
+      opacity: 0.9;
+      margin-top: -3px;
+    }
+
+    nav {
+      margin-left: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: #ffffff;
+      color: #0b4f6c;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0b4f6c, #126a8d);
+      color: white;
+      padding: 35px 16px;
+      text-align: left;
+    }
+
+    .hero h2 {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      margin-bottom: 16px;
+      max-width: 700px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #fbbf24;
+      color: #1f2933;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 15px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.25);
+    }
+
+    .btn:hover {
+      background: #f9a826;
+    }
