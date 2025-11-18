@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Instituto Faciliti • Saúde • Gestão • Inovação</title>
+  <title>Instituto Faciliti • Limpeza Profissional & Terceirização</title>
 
-  <meta name="description" content="Instituto Faciliti - Organização voltada à gestão de serviços de saúde em parceria com o poder público.">
+  <meta name="description" content="Instituto Faciliti - Limpeza profissional de hospitais, escolas, clínicas e condomínios. Soluções completas em higienização, conservação e terceirização de serviços.">
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     body {
@@ -21,34 +21,43 @@
       line-height: 1.6;
     }
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
     header {
       background: #0b4f6c;
       color: #ffffff;
-      padding: 14px 20px;
+      padding: 12px 18px;
       display: flex;
       align-items: center;
       gap: 14px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     header img {
-      height: 55px;
+      height: 52px;
       width: auto;
       border-radius: 8px;
       background: #ffffff;
       padding: 4px;
     }
 
-    h1 {
+    .logo-text h1 {
       margin: 0;
-      font-size: 22px;
+      font-size: 1.2rem;
+      letter-spacing: 0.08em;
       font-weight: 700;
     }
 
-    .sub {
-      font-size: 13px;
+    .logo-text span {
+      font-size: 0.8rem;
       opacity: 0.9;
-      margin-top: -3px;
     }
 
     nav {
@@ -60,119 +69,522 @@
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     nav a {
-      padding: 6px 12px;
+      padding: 6px 11px;
       border-radius: 999px;
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
+      color: #e5f2ff;
+      font-size: 0.82rem;
       border: 1px solid transparent;
     }
 
     nav a:hover {
       background: #ffffff;
       color: #0b4f6c;
+      border-color: rgba(255,255,255,0.4);
     }
 
+    /* HERO */
     .hero {
       background: linear-gradient(135deg, #0b4f6c, #126a8d);
       color: white;
-      padding: 40px 20px;
+      padding: 34px 16px 40px;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero-tag {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      opacity: 0.9;
+      margin-bottom: 6px;
     }
 
     .hero h2 {
-      font-size: 26px;
+      font-size: 1.9rem;
       margin-bottom: 10px;
+      max-width: 650px;
     }
 
     .hero p {
-      font-size: 16px;
+      font-size: 0.98rem;
       margin-bottom: 16px;
-      max-width: 700px;
+      max-width: 650px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .badge {
+      font-size: 0.76rem;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.12);
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .btn {
-      display: inline-block;
-      background: #fbbf24;
-      color: #1f2933;
-      padding: 10px 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
       border-radius: 999px;
-      font-size: 15px;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 5px 12px rgba(0,0,0,0.25);
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      white-space: nowrap;
     }
 
-    .btn:hover {
-      background: #f9a826;
+    .btn-primary {
+      background: #fbbf24;
+      color: #1f2933;
+      box-shadow: 0 5px 14px rgba(0,0,0,0.3);
     }
-      main {
-      padding: 30px 20px;
+
+    .btn-primary:hover {
+      background: #f59e0b;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.7);
+    }
+
+    .btn-outline:hover {
+      background: #ffffff;
+      color: #0b4f6c;
+    }
+
+    /* SEÇÕES */
+    main {
       max-width: 1100px;
-      margin: auto;
+      margin: 0 auto;
+      padding: 24px 16px 36px;
     }
 
     section {
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
 
     section h2 {
-      font-size: 22px;
+      font-size: 1.35rem;
       color: #0b4f6c;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
-    section p {
-      font-size: 15px;
-      color: #374151;
-      margin-bottom: 16px;
+    .section-sub {
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin-bottom: 14px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     }
 
     .card {
-      background: white;
-      padding: 16px;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-      margin-bottom: 14px;
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 14px 14px 15px;
+      box-shadow: 0 3px 10px rgba(15,23,42,0.08);
       border: 1px solid #e5e7eb;
+      font-size: 0.9rem;
     }
 
     .card h3 {
-      font-size: 18px;
+      font-size: 1rem;
       margin-bottom: 6px;
-      color: #0b4f6c;
+      color: #111827;
+    }
+
+    .card small {
+      font-size: 0.78rem;
+      color: #6b7280;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .pill {
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      background: #e5f0ff;
+      color: #1e3a8a;
+    }
+
+    ul.simple {
+      padding-left: 18px;
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
+    ul.simple li {
+      margin-bottom: 4px;
+    }
+
+    /* CONTATO */
+    .contact-grid {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 
     .contact-box {
-      background: white;
-      padding: 16px;
+      background: #ffffff;
       border-radius: 12px;
+      padding: 12px 14px;
       border: 1px solid #e5e7eb;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.07);
-      margin-bottom: 10px;
+      font-size: 0.9rem;
     }
 
+    .contact-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6b7280;
+      margin-bottom: 2px;
+    }
+
+    .contact-value {
+      font-size: 0.95rem;
+      color: #111827;
+    }
+
+    /* FOOTER */
     footer {
       background: #0b4f6c;
       color: #e5f2ff;
-      padding: 20px;
+      padding: 16px;
+      font-size: 0.78rem;
       text-align: center;
-      margin-top: 30px;
-      font-size: 14px;
     }
 
-    /* Botão WhatsApp */
+    /* BOTÃO WHATSAPP FIXO */
     .whatsapp-btn {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #22c55e;
-      width: 58px;
-      height: 58px;
+      bottom: 18px;
+      right: 18px;
+      width: 56px;
+      height: 56px;
       border-radius: 50%;
+      background: #22c55e;
       display: flex;
+      align-items: center;
       justify-content: center;
-      align-items:
-      
+      font-size: 28px;
+      color: #ffffff;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+      z-index: 20;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      header {
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 6px;
+      }
+
+      nav ul {
+        justify-content: flex-start;
+      }
+
+      .hero h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <img src="f13d25b9-7610-4ef1-9320-78d06753550e.png" alt="Logo Instituto Faciliti">
+    <div class="logo-text">
+      <h1>INSTITUTO FACILITI</h1>
+      <span>Limpeza Profissional & Terceirização de Serviços</span>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#segmentos">Segmentos</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-tag">PROPOSTA COMERCIAL • VERSÃO LUXO</div>
+      <h2>Limpeza profissional para hospitais, escolas, clínicas e condomínios.</h2>
+      <p>
+        O Instituto Faciliti oferece soluções completas em limpeza, higienização e conservação
+        de ambientes críticos e de grande circulação, com equipes treinadas e foco em segurança,
+        imagem e bem-estar de usuários, pacientes, alunos e moradores.
+      </p>
+
+      <div class="hero-badges">
+        <span class="badge">Limpeza hospitalar</span>
+        <span class="badge">Limpeza escolar</span>
+        <span class="badge">Clínicas & laboratórios</span>
+        <span class="badge">Condomínios e áreas comuns</span>
+      </div>
+
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="https://wa.me/5519995955105" target="_blank">Solicitar proposta</a>
+        <a class="btn btn-outline" href="#servicos">Ver serviços detalhados</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- SOBRE -->
+    <section id="sobre">
+      <h2>Sobre o Instituto Faciliti</h2>
+      <p class="section-sub">
+        Criado para atender com excelência condomínios, escolas, clínicas, hospitais e ambientes corporativos,
+        o Instituto Faciliti une organização, treinamento e supervisão constante para entregar um padrão de
+        limpeza de alto nível, alinhado às normas de segurança e às necessidades de cada cliente.
+      </p>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Quem somos</h3>
+          <p>
+            Uma estrutura profissional focada em limpeza, higienização e conservação, com visão moderna,
+            processos padronizados e foco em resultado. Atuamos com equipe uniformizada, identificada e
+            treinada especificamente para cada tipo de ambiente.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Missão</h3>
+          <p>
+            Oferecer serviços de limpeza profissional que elevem o padrão de cuidado, conforto e imagem
+            dos ambientes, garantindo segurança, eficiência e tranquilidade para o contratante.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Visão</h3>
+          <p>
+            Ser referência em limpeza profissional e terceirização de serviços, reconhecida pela qualidade,
+            organização e relacionamento com nossos clientes.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Fundador</h3>
+          <p>
+            <strong>Luís Carlos de Jesus</strong>, empreendedor à frente do Instituto Faciliti, com atuação
+            focada em serviços de qualidade, atendimento próximo e visão estratégica para atender contratos
+            de pequeno, médio e grande porte.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos">
+      <h2>Serviços oferecidos</h2>
+      <p class="section-sub">
+        Estruturamos escopos de serviços sob medida para cada tipo de cliente, sempre com foco em organização,
+        produtividade e entrega de um ambiente limpo e bem cuidado.
+      </p>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Limpeza hospitalar</h3>
+          <p>
+            Procedimentos específicos para áreas sensíveis, com foco em higienização de superfícies, mobiliário,
+            sanitários, corredores, salas de espera e áreas comuns.
+          </p>
+          <small>Respeito às rotinas da unidade e aos protocolos de segurança.</small>
+        </div>
+
+        <div class="card">
+          <h3>Limpeza de clínicas e consultórios</h3>
+          <p>
+            Limpeza detalhada de salas de atendimento, recepções, banheiros, áreas de circulação e apoio,
+            garantindo conforto e boa apresentação aos pacientes.
+          </p>
+          <small>Ambiente sempre limpo, organizado e acolhedor.</small>
+        </div>
+
+        <div class="card">
+          <h3>Limpeza escolar</h3>
+          <p>
+            Organização e limpeza de salas de aula, pátios, banheiros, áreas administrativas e espaços de convivência,
+            contribuindo para um ambiente agradável a alunos e equipe.
+          </p>
+          <small>Rotinas adaptadas ao funcionamento da escola.</small>
+        </div>
+
+        <div class="card">
+          <h3>Condomínios e áreas comuns</h3>
+          <p>
+            Limpeza de halls, escadas, elevadores, salões de festa, garagens e áreas externas, valorizando a
+            imagem do empreendimento e o bem-estar dos moradores.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Limpeza comercial e corporativa</h3>
+          <p>
+            Escritórios, lojas, recepções, centros comerciais e espaços administrativos com rotinas de limpeza
+            adaptadas ao fluxo de pessoas e à necessidade do cliente.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Terceirização de serviços</h3>
+          <p>
+            Disponibilizamos equipes de limpeza, auxiliares e apoio operacional, com supervisão e coordenação
+            realizadas pelo Instituto Faciliti.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEGMENTOS -->
+    <section id="segmentos">
+      <h2>Segmentos atendidos</h2>
+      <p class="section-sub">
+        O Instituto Faciliti está preparado para atuar em diferentes tipos de estruturas, sempre ajustando
+        escala de pessoal, materiais e rotinas.
+      </p>
+
+      <ul class="simple">
+        <li>Hospitais, clínicas, consultórios e laboratórios.</li>
+        <li>Escolas, faculdades, creches e instituições de ensino.</li>
+        <li>Condomínios residenciais e comerciais.</li>
+        <li>Escritórios, empresas e prédios corporativos.</li>
+        <li>Áreas comuns, recepções, salões de eventos e auditórios.</li>
+      </ul>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section id="diferenciais">
+      <h2>Diferenciais do Instituto Faciliti</h2>
+      <p class="section-sub">
+        Mais do que limpeza, entregamos padrão visual, organização e segurança para o seu espaço.
+      </p>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Pessoas & processos</h3>
+          <div class="pill-list">
+            <span class="pill">Equipes treinadas</span>
+            <span class="pill">Uniforme e identificação</span>
+            <span class="pill">Escalas definidas</span>
+          </div>
+          <p style="margin-top:6px;">
+            Acompanhamento próximo, supervisão e orientação contínua, garantindo que o padrão de limpeza
+            combinando seja mantido no dia a dia.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Segurança & confiança</h3>
+          <div class="pill-list">
+            <span class="pill">Cuidados com mobiliário</span>
+            <span class="pill">Materiais adequados</span>
+            <span class="pill">Rotinas organizadas</span>
+          </div>
+          <p style="margin-top:6px;">
+            Uso de materiais de limpeza adequados para cada tipo de superfície, sempre com foco em durabilidade
+            e boa apresentação dos ambientes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+      <h2>Contato e propostas</h2>
+      <p class="section-sub">
+        Envie sua demanda e teremos prazer em montar uma proposta personalizada para sua escola, clínica,
+        condomínio ou empresa.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-box">
+          <div class="contact-label">WhatsApp</div>
+          <div class="contact-value">(19) 99595-5105</div>
+        </div>
+
+        <div class="contact-box">
+          <div class="contact-label">E-mail</div>
+          <div class="contact-value">institutofaciliti@gmail.com</div>
+        </div>
+
+        <div class="contact-box">
+          <div class="contact-label">Cidade-base</div>
+          <div class="contact-value">
+            São João da Boa Vista – SP
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:14px;">
+        <a class="btn btn-primary" href="https://wa.me/5519995955105" target="_blank">
+          Falar com o Instituto Faciliti
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Instituto Faciliti – Limpeza Profissional & Terceirização de Serviços • © <span id="ano"></span>
+  </footer>
+
+  <!-- BOTÃO WHATSAPP FIXO -->
+  <a href="https://wa.me/5519995955105" class="whatsapp-btn" target="_blank" aria-label="Fale com o Instituto Faciliti no WhatsApp">
+    💬
+  </a>
+
+  <script>
+    document.getElementById("ano").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
