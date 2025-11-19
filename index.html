@@ -2,36 +2,21 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Instituto Faciliti – Proposta Comercial Versão Luxo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Proposta comercial do Instituto Faciliti para serviços de limpeza profissional, higienização e conservação de ambientes críticos.">
   <style>
-    :root {
-      --azul-escuro: #052337;
-      --azul-meio: #07466c;
-      --azul-claro: #0c74b7;
-      --branco: #ffffff;
-      --dourado: #f4c15b;
-      --cinza-claro: #f3f5f9;
-      --cinza-texto: #f0f4fa;
-      --verde-whats: #25d366;
-      --azul-insta: #405de6;
-      --radius-card: 18px;
-      --shadow-card: 0 18px 45px rgba(0, 0, 0, 0.30);
-    }
-
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, sans-serif;
-      background: radial-gradient(circle at top left, #0f7cc1, #041624);
-      color: var(--branco);
+      background: #031525;
+      color: #f5f7fb;
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
     }
 
     a {
@@ -39,92 +24,87 @@
       color: inherit;
     }
 
-    /* NAVBAR */
+    /* ===== TOPO / NAVBAR ===== */
     header {
+      background: linear-gradient(90deg, #00509d, #0077c8);
+      padding: 12px 18px;
       position: sticky;
       top: 0;
       z-index: 50;
-      backdrop-filter: blur(14px);
-      background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.50),
-        rgba(0, 0, 0, 0.10)
-      );
-      border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
     }
 
     .nav {
-      max-width: 1120px;
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 12px 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: 16px;
     }
 
-    .nav-brand {
+    .nav-left {
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    .nav-logo {
-      width: 40px;
-      height: 40px;
+    .logo-box {
+      width: 42px;
+      height: 42px;
       border-radius: 12px;
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.06);
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
     }
 
-    .nav-logo img {
+    .logo-box img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      display: block;
+      object-fit: contain;
     }
 
-    .nav-title {
+    .brand-text {
       display: flex;
       flex-direction: column;
-      font-size: 0.8rem;
+      gap: 2px;
+    }
+
+    .brand-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+    }
+
+    .brand-subtitle {
+      font-size: 0.7rem;
+      letter-spacing: 0.24em;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
-      line-height: 1.2;
-    }
-
-    .nav-title span:first-child {
-      font-weight: 600;
-    }
-
-    .nav-title span:last-child {
-      font-size: 0.72rem;
-      opacity: 0.8;
+      opacity: 0.9;
     }
 
     .nav-links {
       display: flex;
-      gap: 18px;
+      gap: 20px;
       font-size: 0.9rem;
+      font-weight: 500;
     }
 
     .nav-links a {
       position: relative;
-      font-weight: 500;
-      opacity: 0.9;
+      padding-bottom: 3px;
     }
 
     .nav-links a::after {
       content: "";
       position: absolute;
       left: 0;
-      bottom: -4px;
+      bottom: 0;
       width: 0;
       height: 2px;
-      background: var(--dourado);
+      background: #ffd76a;
       transition: width 0.2s ease;
     }
 
@@ -132,463 +112,299 @@
       width: 100%;
     }
 
-    /* HERO */
-
-    .hero-wrapper {
-      max-width: 1120px;
-      margin: 32px auto 40px;
-      padding: 0 16px;
+    @media (max-width: 720px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
     }
 
-    .hero-card {
-      background: radial-gradient(circle at top left, #0c76bb, #041724);
-      border-radius: 26px;
-      padding: 28px 22px 26px;
-      box-shadow: var(--shadow-card);
-      border: 1px solid rgba(255, 255, 255, 0.10);
+    /* ===== CONTEÚDO PRINCIPAL ===== */
+    main {
+      padding: 24px 16px 64px;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .hero-card-wrapper {
+      background: radial-gradient(circle at top left, #008ae6 0, #003a70 45%, #02101f 100%);
+      padding: 28px 16px 32px;
+      border-radius: 28px;
+      box-shadow:
+        0 26px 60px rgba(0, 0, 0, 0.6),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
       position: relative;
       overflow: hidden;
     }
 
-    .hero-card::before {
+    .hero-card-wrapper::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(
-          circle at top left,
-          rgba(255, 255, 255, 0.18),
-          transparent 55%
-        ),
-        linear-gradient(
-          135deg,
-          rgba(255, 255, 255, 0.10),
-          rgba(255, 255, 255, 0)
-        );
-      opacity: 0.9;
-      mix-blend-mode: soft-light;
+      background: radial-gradient(circle at top right, rgba(255, 215, 106, 0.25), transparent 55%);
+      opacity: 0.8;
       pointer-events: none;
     }
 
     .hero-inner {
       position: relative;
       z-index: 1;
-      display: grid;
-      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.8fr);
-      gap: 26px;
+      max-width: 680px;
+    }
+
+    .pill {
+      display: inline-flex;
       align-items: center;
-    }
-
-    .hero-label {
+      justify-content: center;
+      padding: 6px 18px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #f5f7fb;
       font-size: 0.8rem;
+      margin-bottom: 18px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.7);
+    }
+
+    .pill span {
+      margin: 0 4px;
+    }
+
+    .hero-title-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.3em;
       text-transform: uppercase;
-      letter-spacing: 0.22em;
-      color: var(--dourado);
-      margin-bottom: 12px;
-    }
-
-    .hero-title {
-      font-size: 1.9rem;
-      line-height: 1.25;
-      margin-bottom: 12px;
-      max-width: 540px;
-    }
-
-    .hero-title span {
-      color: var(--dourado);
-      font-weight: 600;
+      color: #ffd76a;
+      margin-bottom: 10px;
     }
 
     .hero-subtitle {
-      font-size: 0.98rem;
-      color: var(--cinza-texto);
-      max-width: 540px;
+      font-size: 0.9rem;
+      max-width: 480px;
+      color: #e3edf7;
       margin-bottom: 18px;
     }
 
-    .hero-highlight {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(4, 15, 24, 0.62);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      font-size: 0.78rem;
+    .section-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
+      color: #ffd76a;
+      margin-top: 8px;
       margin-bottom: 18px;
     }
 
-    .hero-highlight-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--dourado);
+    .hero-heading {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin-bottom: 14px;
     }
 
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+    .hero-heading span.highlight {
+      color: #ffd76a;
+    }
+
+    .hero-text {
+      font-size: 0.98rem;
+      color: #e3edf7;
       margin-bottom: 24px;
     }
 
-    .hero-badge {
-      font-size: 0.8rem;
-      padding: 7px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      background: rgba(2, 14, 24, 0.55);
-      color: var(--cinza-texto);
+    .hero-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 420px;
     }
 
-    .hero-actions {
+    .btn-primary,
+    .btn-secondary {
+      border-radius: 999px;
+      padding: 10px 18px;
+      border: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
       align-items: center;
+      justify-content: center;
+      gap: 6px;
     }
 
     .btn-primary {
-      background: var(--verde-whats);
-      color: #032012;
-      border-radius: 999px;
-      padding: 10px 20px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+      background: #00b368;
+      color: #012216;
+      box-shadow: 0 14px 30px rgba(0, 179, 104, 0.55);
     }
 
-    .btn-primary span.icon {
-      font-size: 1.2rem;
+    .btn-primary:hover {
+      filter: brightness(1.05);
     }
 
     .btn-secondary {
-      padding: 9px 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.5);
       background: transparent;
-      color: var(--branco);
-      font-size: 0.9rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      cursor: pointer;
+      color: #f5f7fb;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
     }
 
-    .btn-secondary span.icon {
-      font-size: 1.1rem;
+    .btn-secondary:hover {
+      background: rgba(0, 0, 0, 0.18);
     }
 
-    .hero-right {
-      text-align: center;
+    .hero-cta small {
+      font-size: 0.78rem;
+      color: #d3e0f2;
+      opacity: 0.9;
+      margin-top: 4px;
+      text-align: left;
     }
 
-    .hero-logo-box {
-      width: 220px;
-      max-width: 100%;
-      margin: 0 auto 14px;
-      border-radius: 28px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      background: #04101a;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+    @media (min-width: 768px) {
+      .hero-card-wrapper {
+        padding: 34px 36px 40px;
+      }
+      .hero-heading {
+        font-size: 2.15rem;
+      }
+      .hero-cta {
+        flex-direction: row;
+        align-items: center;
+      }
+      .hero-cta small {
+        flex-basis: 100%;
+      }
     }
 
-    .hero-logo-box img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero-right-title {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--dourado);
-      margin-bottom: 6px;
-    }
-
-    .hero-right-text {
-      font-size: 0.8rem;
-      color: var(--cinza-texto);
-      max-width: 260px;
-      margin: 0 auto;
-    }
-
-    /* SECTIONS */
-
-    main {
-      max-width: 1120px;
-      margin: 0 auto 70px;
-      padding: 0 16px 40px;
-    }
-
+    /* ===== SEÇÕES ABAIXO ===== */
     section {
       margin-top: 32px;
     }
 
     .section-title {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       margin-bottom: 12px;
+      color: #f5f7fb;
+    }
+
+    .section-text {
+      font-size: 0.95rem;
+      color: #d1deef;
+    }
+
+    .chips {
+      margin-top: 12px;
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       gap: 8px;
     }
 
-    .section-title::before {
-      content: "";
-      width: 4px;
-      height: 18px;
+    .chip {
+      padding: 6px 12px;
       border-radius: 999px;
-      background: var(--dourado);
-    }
-
-    .section-card {
-      background: rgba(4, 16, 26, 0.92);
-      border-radius: var(--radius-card);
-      padding: 18px 18px 18px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.45);
-      color: var(--cinza-texto);
-      font-size: 0.94rem;
-    }
-
-    .section-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 14px;
-    }
-
-    .pill-title {
-      font-weight: 600;
-      margin-bottom: 6px;
-      color: var(--branco);
-    }
-
-    .pill-list {
-      list-style: none;
-      font-size: 0.9rem;
-    }
-
-    .pill-list li::before {
-      content: "• ";
-      color: var(--dourado);
-    }
-
-    /* FOOTER */
-
-    footer {
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
-      padding: 18px 16px 26px;
-      background: rgba(2, 9, 14, 0.98);
-      color: var(--cinza-texto);
+      background: rgba(13, 71, 161, 0.4);
+      border: 1px solid rgba(144, 202, 249, 0.4);
       font-size: 0.8rem;
+      color: #e3f2fd;
     }
 
-    .footer-inner {
-      max-width: 1120px;
+    /* ===== RODAPÉ ===== */
+    footer {
+      margin-top: 40px;
+      padding: 18px 0 26px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.8rem;
+      color: #b8c6de;
+    }
+
+    footer .footer-inner {
+      max-width: 1080px;
       margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 14px;
-    }
-
-    .footer-block strong {
-      color: var(--branco);
-    }
-
-    .footer-social {
+      padding: 0 16px;
       display: flex;
       flex-direction: column;
       gap: 4px;
-      text-align: right;
     }
 
-    .footer-social a {
-      color: var(--dourado);
-      font-weight: 500;
+    footer a {
+      color: #90caf9;
     }
 
-    /* FLOATING BUTTONS */
-
-    .floating-buttons {
+    /* ===== WHATSAPP FLUTUANTE ===== */
+    .whatsapp-float {
       position: fixed;
-      right: 14px;
+      right: 18px;
       bottom: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      z-index: 60;
-    }
-
-    .float-btn {
       width: 52px;
       height: 52px;
-      border-radius: 999px;
+      border-radius: 50%;
+      background: #25d366;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #ffffff;
-      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.55);
-      border: 2px solid rgba(255, 255, 255, 0.85);
-      font-size: 1.5rem;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+      z-index: 60;
     }
 
-    .float-whats {
-      background: var(--verde-whats);
-    }
-
-    .float-insta {
-      background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #405de6);
-    }
-
-    /* RESPONSIVO */
-
-    @media (max-width: 780px) {
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        width: 100%;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
-
-      .hero-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-right {
-        order: -1;
-      }
-
-      .hero-card {
-        padding: 22px 18px 20px;
-      }
-
-      .hero-title {
-        font-size: 1.5rem;
-      }
+    .whatsapp-float svg {
+      width: 26px;
+      height: 26px;
+      fill: #ffffff;
     }
 
     @media (max-width: 480px) {
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .btn-primary,
-      .btn-secondary {
-        justify-content: center;
-        width: 100%;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        text-align: left;
-      }
-
-      .footer-social {
-        text-align: left;
+      .whatsapp-float {
+        width: 48px;
+        height: 48px;
+        right: 14px;
+        bottom: 14px;
       }
     }
   </style>
 </head>
 <body>
-  <!-- NAV -->
+
+  <!-- TOPO -->
   <header>
-    <nav class="nav">
-      <div class="nav-brand">
-        <div class="nav-logo">
-          <!-- TROQUE o nome do arquivo se a sua logo tiver outro nome -->
-          <img src="logo-instituto-faciliti.png" alt="Logotipo Instituto Faciliti" />
+    <div class="nav">
+      <div class="nav-left">
+        <div class="logo-box">
+          <!-- IMPORTANTE: esse arquivo deve existir na mesma pasta do index.html -->
+          <img src="logo-instituto-faciliti-branco.png" alt="Logotipo Instituto Faciliti">
         </div>
-        <div class="nav-title">
-          <span>INSTITUTO FACILITI</span>
-          <span>Saúde • Gestão • Inovação</span>
+        <div class="brand-text">
+          <div class="brand-name">INSTITUTO FACILITI</div>
+          <div class="brand-subtitle">SAÚDE • GESTÃO • INOVAÇÃO</div>
         </div>
       </div>
-      <div class="nav-links">
+
+      <nav class="nav-links">
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
         <a href="#segmentos">Segmentos</a>
         <a href="#diferenciais">Diferenciais</a>
         <a href="#contato">Contato</a>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
-  <!-- HERO -->
-  <div class="hero-wrapper">
-    <div class="hero-card">
-      <div class="hero-inner">
-        <div class="hero-left">
-          <div class="hero-label">
-            PROPOSTA COMERCIAL • VERSÃO LUXO
+  <!-- CONTEÚDO -->
+  <main>
+    <div class="container">
+
+      <!-- HERO / PROPOSTA COMERCIAL -->
+      <section class="hero-card-wrapper" id="topo">
+        <div class="hero-inner">
+
+          <div class="pill">
+            <span>Instituto Faciliti</span> • <span>Versão Luxo</span>
           </div>
 
-          <h1 class="hero-title">
-            Limpeza profissional completa para
-            <span>hospitais, escolas, clínicas e condomínios.</span>
-          </h1>
-
-          <p class="hero-subtitle">
-            O Instituto Faciliti oferece soluções em limpeza, higienização especializada
-            e conservação de ambientes críticos, com foco em segurança, imagem e bem-estar
-            de usuários, pacientes, alunos e moradores.
-          </p>
-
-          <div class="hero-highlight">
-            <span class="hero-highlight-dot"></span>
-            Gestão profissional de equipes & resultados
-          </div>
-
-          <div class="hero-badges">
-            <div class="hero-badge">Protocolos de limpeza hospitalar</div>
-            <div class="hero-badge">Profissionais uniformizados</div>
-            <div class="hero-badge">Produtos certificados e controlados</div>
-          </div>
-
-          <div class="hero-actions">
-            <a
-              class="btn-primary"
-              href="https://wa.me/5519995955105?text=Ol%C3%A1%2C+gostaria+de+uma+proposta+comercial+do+Instituto+Faciliti."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="icon">💬</span>
-              <span>Solicitar proposta no WhatsApp</span>
-            </a>
-
-            <a class="btn-secondary" href="#servicos">
-              <span class="icon">⬇️</span>
-              <span>Ver serviços detalhados</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="hero-right">
-          <div class="hero-logo-box">
-            <!-- A mesma logo da capa versão luxo -->
-            <img src="logo-instituto-faciliti.png" alt="Instituto Faciliti – Versão Luxo" />
-          </div>
-          <div class="hero-right-title">
-            INSTITUTO FACILITI
-          </div>
-          <p class="hero-right-text">
-            Proposta comercial desenvolvida sob medida para atender com excelência
-            às demandas de limpeza, higienização, apoio e conservação de ambientes.
-          </p>
-        </div>
-      </div>
-      </div>
+          <div class="hero                         
