@@ -1,63 +1,53 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <title>Instituto Faciliti – Proposta Comercial Versão Luxo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Proposta comercial do Instituto Faciliti para serviços de limpeza profissional, higienização e conservação de ambientes críticos.">
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
-      background: #031525;
-      color: #f5f7fb;
+      background: #02101F;
+      color: #ffffff;
       line-height: 1.6;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* ===== TOPO / NAVBAR ===== */
+    /* TOPO */
     header {
-      background: linear-gradient(90deg, #00509d, #0077c8);
-      padding: 12px 18px;
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
-    }
-
-    .nav {
-      max-width: 1080px;
-      margin: 0 auto;
+      background: linear-gradient(90deg, #0058A8, #0075D9);
+      padding: 14px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    .nav-left {
+    .topo-esq {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 14px;
     }
 
     .logo-box {
-      width: 42px;
-      height: 42px;
+      width: 48px;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.08);
       border-radius: 12px;
-      background: rgba(255, 255, 255, 0.06);
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
     }
 
     .logo-box img {
@@ -66,346 +56,303 @@
       object-fit: contain;
     }
 
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
+    .brand-title {
+      font-size: 1rem;
+      font-weight: bold;
+      letter-spacing: 0.18em;
     }
 
-    .brand-name {
-      font-size: 0.95rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-    }
-
-    .brand-subtitle {
-      font-size: 0.7rem;
+    .brand-sub {
+      font-size: 0.75rem;
       letter-spacing: 0.24em;
-      text-transform: uppercase;
       opacity: 0.9;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 20px;
+    nav a {
+      color: #ffffff;
+      margin-left: 18px;
+      text-decoration: none;
       font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .nav-links a {
       position: relative;
-      padding-bottom: 3px;
     }
 
-    .nav-links a::after {
+    nav a::after {
       content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
+      width: 0%;
       height: 2px;
-      background: #ffd76a;
-      transition: width 0.2s ease;
+      background: #FFD65A;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      transition: 0.3s;
     }
 
-    .nav-links a:hover::after {
+    nav a:hover::after {
       width: 100%;
     }
 
-    @media (max-width: 720px) {
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .nav-links {
-        width: 100%;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
-    }
-
-    /* ===== CONTEÚDO PRINCIPAL ===== */
     main {
-      padding: 24px 16px 64px;
+      padding: 24px 18px;
+      max-width: 1180px;
+      margin: auto;
     }
 
-    .container {
-      max-width: 1080px;
-      margin: 0 auto;
-    }
-
-    .hero-card-wrapper {
-      background: radial-gradient(circle at top left, #008ae6 0, #003a70 45%, #02101f 100%);
-      padding: 28px 16px 32px;
-      border-radius: 28px;
-      box-shadow:
-        0 26px 60px rgba(0, 0, 0, 0.6),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card-wrapper::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top right, rgba(255, 215, 106, 0.25), transparent 55%);
-      opacity: 0.8;
-      pointer-events: none;
-    }
-
-    .hero-inner {
-      position: relative;
-      z-index: 1;
-      max-width: 680px;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 6px 18px;
-      border-radius: 999px;
-      background: rgba(0, 0, 0, 0.7);
-      color: #f5f7fb;
-      font-size: 0.8rem;
-      margin-bottom: 18px;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.7);
-    }
-
-    .pill span {
-      margin: 0 4px;
-    }
-
-    .hero-title-label {
-      font-size: 0.8rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: #ffd76a;
-      margin-bottom: 10px;
-    }
-
-    .hero-subtitle {
-      font-size: 0.9rem;
-      max-width: 480px;
-      color: #e3edf7;
-      margin-bottom: 18px;
-    }
-
-    .section-label {
-      font-size: 0.8rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: #ffd76a;
-      margin-top: 8px;
-      margin-bottom: 18px;
-    }
-
-    .hero-heading {
-      font-size: 1.75rem;
-      font-weight: 800;
-      margin-bottom: 14px;
-    }
-
-    .hero-heading span.highlight {
-      color: #ffd76a;
-    }
-
-    .hero-text {
-      font-size: 0.98rem;
-      color: #e3edf7;
-      margin-bottom: 24px;
-    }
-
-    .hero-cta {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      max-width: 420px;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-      border-radius: 999px;
-      padding: 10px 18px;
-      border: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-    }
-
-    .btn-primary {
-      background: #00b368;
-      color: #012216;
-      box-shadow: 0 14px 30px rgba(0, 179, 104, 0.55);
-    }
-
-    .btn-primary:hover {
-      filter: brightness(1.05);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: #f5f7fb;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(10px);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(0, 0, 0, 0.18);
-    }
-
-    .hero-cta small {
-      font-size: 0.78rem;
-      color: #d3e0f2;
-      opacity: 0.9;
-      margin-top: 4px;
-      text-align: left;
-    }
-
-    @media (min-width: 768px) {
-      .hero-card-wrapper {
-        padding: 34px 36px 40px;
-      }
-      .hero-heading {
-        font-size: 2.15rem;
-      }
-      .hero-cta {
-        flex-direction: row;
-        align-items: center;
-      }
-      .hero-cta small {
-        flex-basis: 100%;
-      }
-    }
-
-    /* ===== SEÇÕES ABAIXO ===== */
-    section {
-      margin-top: 32px;
-    }
-
-    .section-title {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-      color: #f5f7fb;
-    }
-
-    .section-text {
-      font-size: 0.95rem;
-      color: #d1deef;
-    }
-
-    .chips {
-      margin-top: 12px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
+    /* CARD LUXO */
+    .card-luxo {
+      background: radial-gradient(circle at top left, #008AE6, #003A70 40%, #020D18);
+      padding: 36px 28px;
+      border-radius: 26px;
+      margin-bottom: 40px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.45);
     }
 
     .chip {
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(13, 71, 161, 0.4);
-      border: 1px solid rgba(144, 202, 249, 0.4);
+      background: rgba(0,0,0,0.55);
+      padding: 6px 18px;
+      border-radius: 50px;
       font-size: 0.8rem;
-      color: #e3f2fd;
+      display: inline-block;
+      margin-bottom: 18px;
     }
 
-    /* ===== RODAPÉ ===== */
-    footer {
-      margin-top: 40px;
-      padding: 18px 0 26px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      font-size: 0.8rem;
-      color: #b8c6de;
+    .titulo-luxo {
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #FFD65A;
+      font-size: 0.85rem;
+      margin-bottom: 12px;
     }
 
-    footer .footer-inner {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 0 16px;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 14px;
+      font-weight: bold;
+    }
+
+    h1 .destaque {
+      color: #FFD65A;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #E4EEF7;
+      margin-bottom: 18px;
+    }
+
+    .botoes {
       display: flex;
-      flex-direction: column;
-      gap: 4px;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 18px;
     }
 
-    footer a {
-      color: #90caf9;
+    .btn {
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      text-align: center;
+      flex: 1;
+      min-width: 200px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    /* ===== WHATSAPP FLUTUANTE ===== */
+    .btn-whats {
+      background: #25D366;
+      color: #001A0C;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+    }
+
+    .btn-instagram {
+      border: 1px solid rgba(255,255,255,0.4);
+      color: #fff;
+      backdrop-filter: blur(10px);
+    }
+
+    /* SEÇÕES */
+    .secao {
+      margin-bottom: 40px;
+    }
+
+    .secao h2 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      background: rgba(255,255,255,0.08);
+      padding: 6px 12px;
+      border-radius: 50px;
+      display: inline-block;
+      margin: 4px;
+      font-size: 0.85rem;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    footer {
+      text-align: center;
+      padding: 22px 0;
+      font-size: 0.85rem;
+      margin-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.14);
+      color: #B8C6D8;
+    }
+
+    /* WHATSAPP FLUTUANTE */
     .whatsapp-float {
       position: fixed;
       right: 18px;
       bottom: 18px;
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
+      width: 58px;
+      height: 58px;
       background: #25d366;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
-      z-index: 60;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      z-index: 999;
     }
 
-    .whatsapp-float svg {
-      width: 26px;
-      height: 26px;
-      fill: #ffffff;
+    .whatsapp-float img {
+      width: 32px;
     }
 
-    @media (max-width: 480px) {
-      .whatsapp-float {
-        width: 48px;
-        height: 48px;
-        right: 14px;
-        bottom: 14px;
+    @media (max-width: 780px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      nav a {
+        margin-left: 0;
+        margin-right: 14px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- TOPO -->
-  <header>
-    <div class="nav">
-      <div class="nav-left">
-        <div class="logo-box">
-          <!-- IMPORTANTE: esse arquivo deve existir na mesma pasta do index.html -->
-          <img src="logo-instituto-faciliti-branco.png" alt="Logotipo Instituto Faciliti">
-        </div>
-        <div class="brand-text">
-          <div class="brand-name">INSTITUTO FACILITI</div>
-          <div class="brand-subtitle">SAÚDE • GESTÃO • INOVAÇÃO</div>
-        </div>
-      </div>
-
-      <nav class="nav-links">
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#segmentos">Segmentos</a>
-        <a href="#diferenciais">Diferenciais</a>
-        <a href="#contato">Contato</a>
-      </nav>
+<header>
+  <div class="topo-esq">
+    <div class="logo-box">
+      <!-- AQUI VAI O ARQUIVO DA SUA LOGO -->
+      <img src="logo-instituto-faciliti-branco.png" alt="Instituto Faciliti">
     </div>
-  </header>
 
-  <!-- CONTEÚDO -->
-  <main>
-    <div class="container">
+    <div>
+      <div class="brand-title">INSTITUTO FACILITI</div>
+      <div class="brand-sub">SAÚDE • GESTÃO • INOVAÇÃO</div>
+    </div>
+  </div>
 
-      <!-- HERO / PROPOSTA COMERCIAL -->
-      <section class="hero-card-wrapper" id="topo">
-        <div class="hero-inner">
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#segmentos">Segmentos</a>
+    <a href="#diferenciais">Diferenciais</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
 
-          <div class="pill">
-            <span>Instituto Faciliti</span> • <span>Versão Luxo</span>
-          </div>
+<main>
+  <!-- BLOCO LUXO -->
+  <div class="card-luxo">
+    <div class="chip">Instituto Faciliti • Versão Luxo</div>
 
-          <div class="hero                         
-            
+    <div class="titulo-luxo">PROPOSTA COMERCIAL</div>
+
+    <h1>
+      Limpeza profissional completa para
+      <span class="destaque">hospitais, escolas, clínicas e condomínios.</span>
+    </h1>
+
+    <p>
+      O Instituto Faciliti oferece soluções completas em limpeza, higienização especializada
+      e conservação de ambientes críticos, com equipes treinadas, foco em segurança, imagem e
+      bem-estar dos usuários, pacientes, alunos e moradores.
+    </p>
+
+    <div class="botoes">
+      <a class="btn btn-whats" href="https://wa.me/5519995955105?text=Quero%20receber%20a%20proposta%20comercial%20do%20Instituto%20Faciliti" target="_blank">
+        Solicitar proposta no WhatsApp
+      </a>
+
+      <a class="btn btn-instagram" href="https://instagram.com/institutofaciliti" target="_blank">
+        Ver mais no Instagram
+      </a>
+    </div>
+  </div>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="secao">
+    <h2>Quem somos</h2>
+    <p>
+      O Instituto Faciliti atua na área da saúde, gestão e inovação, oferecendo soluções completas
+      para hospitais, clínicas, prefeituras, unidades de saúde e organizações sociais.
+    </p>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="secao">
+    <h2>Serviços especializados</h2>
+    <p>Estrutura completa, equipes treinadas e controles rígidos de qualidade.</p>
+
+    <span class="tag">Limpeza hospitalar</span>
+    <span class="tag">Áreas críticas</span>
+    <span class="tag">Conservação</span>
+    <span class="tag">Apoio operacional</span>
+    <span class="tag">Terceirização de mão de obra</span>
+  </section>
+
+  <!-- SEGMENTOS -->
+  <section id="segmentos" class="secao">
+    <h2>Segmentos atendidos</h2>
+
+    <span class="tag">Hospitais e clínicas</span>
+    <span class="tag">UPAs</span>
+    <span class="tag">Escolas</span>
+    <span class="tag">Condomínios</span>
+    <span class="tag">Empresas e comércios</span>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section id="diferenciais" class="secao">
+    <h2>Diferenciais</h2>
+
+    <span class="tag">Protocolos de limpeza hospitalar</span>
+    <span class="tag">Equipe uniformizada e treinada</span>
+    <span class="tag">Produtos certificados e controlados</span>
+    <span class="tag">Supervisão e relatórios de gestão</span>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="secao">
+    <h2>Contato</h2>
+
+    <span class="tag">WhatsApp: (19) 99595-5105</span>
+    <span class="tag">E-mail: institutofaciliti@gmail.com</span>
+    <span class="tag">Instagram: @institutofaciliti</span>
+  </section>
+</main>
+
+<!-- BOTÃO WHATSAPP FLUTUANTE -->
+<a class="whatsapp-float" href="https://wa.me/5519995955105" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<footer>
+  © Instituto Faciliti – Saúde, Gestão e Inovação • Versão Luxo
+</footer>
+
+</body>
+      </html>   
+    
+          
