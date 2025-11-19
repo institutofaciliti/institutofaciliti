@@ -1,512 +1,129 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <title>Instituto Faciliti | Limpeza Profissional & Terceirização</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Instituto Faciliti - Soluções profissionais em limpeza, higienização e terceirização de serviços para hospitais, escolas, clínicas, empresas e condomínios." />
-
-  <!-- Fonte Google -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
-  <style>
-    :root {
-      --azul-escuro: #041b3d;
-      --azul-real: #0a4fa3;
-      --azul-medio: #0f67cf;
-      --branco: #ffffff;
-      --cinza-claro: #f4f6fb;
-      --cinza-texto: #646a78;
-      --dourado: #e0b75a;
-      --radius-card: 18px;
-      --shadow-card: 0 18px 40px rgba(0, 0, 0, 0.18);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: var(--cinza-claro);
-      color: var(--cinza-texto);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    /* ====== ANIMAÇÃO DE ENTRADA ====== */
-    [data-animate] {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .animate {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ====== LAYOUT BASE ====== */
-    .container {
-      width: 100%;
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 0 16px;
-    }
-
-    /* ====== CABEÇALHO ====== */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 50;
-      background: linear-gradient(90deg, rgba(4, 27, 61, 0.98), rgba(10, 79, 163, 0.98));
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 16px;
-      max-width: 1180px;
-      margin: 0 auto;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--branco);
-    }
-
-    .brand-logo {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      border: 2px solid rgba(224, 183, 90, 0.9);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 20px;
-      background: radial-gradient(circle at 20% 0, #0f67cf, #041b3d);
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-    }
-
-    .brand-text span:first-child {
-      font-size: 14px;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.78);
-    }
-
-    .brand-text span:last-child {
-      font-size: 17px;
-      font-weight: 700;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    nav a {
-      color: rgba(255, 255, 255, 0.84);
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: var(--dourado);
-    }
-
-    .btn-header {
-      padding: 8px 18px;
-      border-radius: 999px;
-      background: var(--dourado);
-      color: #2d2816;
-      font-size: 13px;
-      font-weight: 600;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-    }
-
-    .btn-header:hover {
-      filter: brightness(1.05);
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        display: none;
-      }
-      .btn-header {
-        font-size: 12px;
-        padding: 7px 14px;
-      }
-    }
-
-    /* ====== HERO ====== */
-    .hero {
-      padding-top: 80px; /* espaço pro header fixo */
-      min-height: 92vh;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(135deg, rgba(4, 27, 61, 0.96), rgba(15, 103, 207, 0.92)),
-        url("fundo-luxo.jpg") center/cover no-repeat;
-      color: var(--branco);
-    }
-
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 3fr 2fr;
-      align-items: center;
-      gap: 40px;
-      padding: 40px 0 60px;
-    }
-
-    @media (max-width: 900px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(0, 0, 0, 0.18);
-      border: 1px solid rgba(224, 183, 90, 0.85);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      margin-bottom: 12px;
-    }
-
-    .hero-badge-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--dourado);
-    }
-
-    .hero h1 {
-      font-size: 2.4rem;
-      line-height: 1.2;
-      font-weight: 700;
-      margin-bottom: 14px;
-      max-width: 600px;
-    }
-
-    .hero h1 span {
-      color: var(--dourado);
-    }
-
-    .hero-sub {
-      font-size: 0.96rem;
-      max-width: 520px;
-      color: rgba(241, 245, 255, 0.92);
-      margin-bottom: 20px;
-    }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 22px;
-    }
-
-    .hero-tag {
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      font-size: 11px;
-      color: rgba(241, 243, 255, 0.9);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      justify-content: flex-start;
-    }
-
-    @media (max-width: 900px) {
-      .hero-actions {
-        justify-content: center;
-      }
-    }
-
-    .btn-primary {
-      background: var(--dourado);
-      color: #221a05;
-      border-radius: 999px;
-      padding: 10px 20px;
-      font-weight: 600;
-      font-size: 14px;
-      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .btn-primary span.icon {
-      font-size: 16px;
-    }
-
-    .btn-ghost {
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.32);
-      color: rgba(248, 250, 255, 0.94);
-      font-size: 13px;
-      background: transparent;
-    }
-
-    .hero-note {
-      margin-top: 10px;
-      font-size: 11px;
-      color: rgba(235, 241, 255, 0.86);
-    }
-
-    .hero-right-card {
-      background: radial-gradient(circle at 0 0, rgba(224,183,90,0.24), transparent 55%),
-                  rgba(4, 13, 30, 0.78);
-      border-radius: 24px;
-      padding: 18px 18px 20px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(16px);
-    }
-
-    .hero-right-title {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: rgba(248, 250, 255, 0.74);
-      margin-bottom: 10px;
-    }
-
-    .hero-right-main {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      font-size: 12px;
-    }
-
-    .hero-pil {
-      padding: 8px 10px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, rgba(10, 79, 163, 0.5), rgba(5, 29, 68, 0.9));
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .hero-pil label {
-      display: block;
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: rgba(218, 231, 255, 0.78);
-    }
-
-    .hero-pil span {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--branco);
-    }
-
-    /* ====== SEÇÕES GERAIS ====== */
-    section {
-      padding: 70px 0;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .section-kicker {
-      font-size: 11px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--azul-real);
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .section-title {
-      font-size: 1.8rem;
-      color: #1b2233;
-      margin-bottom: 8px;
-    }
-
-    .section-subtitle {
-      font-size: 0.96rem;
-      color: var(--cinza-texto);
-      max-width: 580px;
-      margin: 0 auto;
-    }
-
-    /* ====== GRID / CARDS ====== */
-    .sobre-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 26px;
-      align-items: start;
-    }
-
-    @media (max-width: 900px) {
-      .sobre-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .card {
-      background: #ffffff;
-      border-radius: var(--radius-card);
-      padding: 22px 22px 24px;
-      box-shadow: var(--shadow-card);
-    }
-
-    .card h3 {
-      font-size: 1.1rem;
-      color: #141824;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      font-size: 0.94rem;
-      color: var(--cinza-texto);
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 14px;
-    }
-
-    .pill {
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: #eef2ff;
-      font-size: 11px;
-      color: #3730a3;
-      font-weight: 500;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    @media (max-width: 900px) {
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .service-card {
-      background: #ffffff;
-      border-radius: var(--radius-card);
-      padding: 20px 20px 22px;
-      box-shadow: var(--shadow-card);
-      border-top: 3px solid var(--azul-real);
-    }
-
-    .service-card h3 {
-      font-size: 1rem;
-      color: #111827;
-      margin-bottom: 6px;
-    }
-
-    .service-card p {
-      font-size: 0.9rem;
-    }
-
-    .service-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      color: var(--azul-real);
-      margin-bottom: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-
-    .service-bullet {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--azul-real);
-    }
-
-    .chips-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-    }
-
-    .chip {
-      padding: 7px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(15, 23, 42, 0.12);
-      background: #ffffff;
-      font-size: 0.85rem;
-      color: #111827;
-      box-shadow: 0 8px 24px rgba(148, 163, 184, 0.2);
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    @media (max-width: 900px) {
-      .grid-2 {
-    
-
-        
-    
-      
-
-    
-              
-    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instituto Faciliti – Proposta Comercial Versão Luxo</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #032b55, #064a88);
+  color: white;
+}
+
+header {
+  padding: 25px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.logo {
+  width: 120px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.sub {
+  font-size: 18px;
+  opacity: 0.85;
+}
+
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  background: rgba(255,255,255,0.08);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.25);
+}
+
+h2 {
+  font-size: 26px;
+  margin-top: 0;
+  border-left: 5px solid #4dd0ff;
+  padding-left: 10px;
+}
+
+.button-whatsapp {
+  display: block;
+  width: 80%;
+  margin: 35px auto;
+  padding: 18px;
+  background: #25D366;
+  color: white;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 15px #25d366aa;
+}
+
+.footer {
+  margin-top: 50px;
+  text-align: center;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.social {
+  margin-top: 20px;
+}
+
+.social a {
+  margin: 0 10px;
+  color: white;
+  font-size: 26px;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="https://raw.githubusercontent.com/institutofaciliti/institutofaciliti/main/file_0000000090a4..." class="logo">
+  <h1>INSTITUTO FACILITI</h1>
+  <div class="sub">Saúde • Gestão • Inovação</div>
+</header>
+
+<section>
+  <h2>Proposta Comercial – Versão Luxo</h2>
+  <p>
+    O Instituto Faciliti oferece soluções completas em limpeza profissional, gestão operacional, 
+    higienização especializada, conservação de ambientes e terceirização de mão de obra para 
+    hospitais, escolas, clínicas, empresas e condomínios.
+  </p>
+
+  <p>
+    Nosso compromisso é entregar excelência, segurança, agilidade e uma equipe altamente treinada 
+    para garantir ambientes impecáveis e saudáveis.
+  </p>
+</section>
+
+<a class="button-whatsapp" href="https://wa.me/5519995955105" target="_blank">
+📲 Solicitar Proposta no WhatsApp
+</a>
+
+<div class="social" style="text-align:center;">
+  <a href="https://instagram.com/institutofaciliti" target="_blank">📸</a>
+  <a href="https://wa.me/5519995955105" target="_blank">💬</a>
+</div>
+
+<div class="footer">
+  © 2025 Instituto Faciliti – Todos os direitos reservados.
+</div>
+
+</body>
+</html>
+            
