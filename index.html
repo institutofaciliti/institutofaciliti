@@ -2,11 +2,344 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>TESTE INSTITUTO FACILITI</title>
+  <title>Instituto Faciliti – Versão Luxo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #02101F;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    /* TOPO */
+    header {
+      background: linear-gradient(90deg, #0058A8, #0075D9);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .topo-esq {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-box {
+      width: 48px;
+      height: 48px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .brand-title {
+      font-size: 1rem;
+      font-weight: bold;
+      letter-spacing: 0.18em;
+    }
+
+    .brand-sub {
+      font-size: 0.75rem;
+      letter-spacing: 0.24em;
+      opacity: 0.9;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin-left: 18px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      width: 0;
+      height: 2px;
+      background: #FFD65A;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      padding: 24px 18px 40px;
+      max-width: 1180px;
+      margin: auto;
+    }
+
+    /* CARD LUXO */
+    .card-luxo {
+      background: radial-gradient(circle at top left, #008AE6, #003A70 40%, #020D18);
+      padding: 32px 24px;
+      border-radius: 26px;
+      margin-bottom: 40px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+    }
+
+    .chip {
+      background: rgba(0,0,0,0.55);
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    .titulo-luxo {
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #FFD65A;
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+
+    h1 .destaque {
+      color: #FFD65A;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #E4EEF7;
+      margin-bottom: 16px;
+    }
+
+    .botoes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .btn {
+      padding: 12px 18px;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      text-align: center;
+      flex: 1;
+      min-width: 200px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-whats {
+      background: #25D366;
+      color: #001A0C;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+    }
+
+    .btn-instagram {
+      border: 1px solid rgba(255,255,255,0.4);
+      color: #ffffff;
+    }
+
+    /* SEÇÕES */
+    .secao {
+      margin-bottom: 30px;
+    }
+
+    .secao h2 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .tag {
+      background: rgba(255,255,255,0.08);
+      padding: 6px 10px;
+      border-radius: 50px;
+      display: inline-block;
+      margin: 4px;
+      font-size: 0.85rem;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.85rem;
+      margin-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.14);
+      color: #B8C6D8;
+    }
+
+    /* WHATSAPP FLUTUANTE */
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 58px;
+      height: 58px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      z-index: 999;
+    }
+
+    .whatsapp-float img {
+      width: 32px;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 780px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      nav a {
+        margin: 4px 10px 0 0;
+      }
+    }
+  </style>
 </head>
-<body style="background:#02101F;color:#fff;font-family:Arial,Helvetica,sans-serif;">
-  <h1 style="text-align:center;margin-top:40px;">
-    TESTE INSTITUTO FACILITI – DEU CERTO ✅
-  </h1>
+<body>
+
+<header>
+  <div class="topo-esq">
+    <div class="logo-box">
+      <!-- depois vamos subir esse arquivo pro GitHub -->
+      <img src="logo-instituto-faciliti-branco.png" alt="Instituto Faciliti">
+    </div>
+    <div>
+      <div class="brand-title">INSTITUTO FACILITI</div>
+      <div class="brand-sub">SAÚDE • GESTÃO • INOVAÇÃO</div>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#segmentos">Segmentos</a>
+    <a href="#diferenciais">Diferenciais</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<main>
+  <div class="card-luxo">
+    <div class="chip">Instituto Faciliti • Versão Luxo</div>
+    <div class="titulo-luxo">PROPOSTA COMERCIAL</div>
+
+    <h1>
+      Limpeza profissional completa para
+      <span class="destaque">hospitais, escolas, clínicas e condomínios.</span>
+    </h1>
+
+    <p>
+      O Instituto Faciliti oferece soluções completas em limpeza, higienização
+      especializada e conservação de ambientes críticos, com equipes treinadas,
+      foco em segurança, imagem e bem-estar dos usuários, pacientes, alunos e moradores.
+    </p>
+
+    <div class="botoes">
+      <a class="btn btn-whats"
+         href="https://wa.me/5519995955105?text=Quero%20receber%20a%20proposta%20comercial%20do%20Instituto%20Faciliti"
+         target="_blank">
+        Solicitar proposta no WhatsApp
+      </a>
+      <a class="btn btn-instagram"
+         href="https://instagram.com/institutofaciliti"
+         target="_blank">
+        Ver mais no Instagram
+      </a>
+    </div>
+  </div>
+
+  <section id="sobre" class="secao">
+    <h2>Quem somos</h2>
+    <p>
+      O Instituto Faciliti atua na área da saúde, gestão e inovação, oferecendo
+      soluções completas para hospitais, clínicas, prefeituras, unidades de
+      saúde e organizações sociais.
+    </p>
+  </section>
+
+  <section id="servicos" class="secao">
+    <h2>Serviços especializados</h2>
+    <span class="tag">Limpeza hospitalar</span>
+    <span class="tag">Áreas críticas</span>
+    <span class="tag">Conservação</span>
+    <span class="tag">Apoio operacional</span>
+    <span class="tag">Terceirização de mão de obra</span>
+  </section>
+
+  <section id="segmentos" class="secao">
+    <h2>Segmentos atendidos</h2>
+    <span class="tag">Hospitais e clínicas</span>
+    <span class="tag">UPAs</span>
+    <span class="tag">Escolas</span>
+    <span class="tag">Condomínios</span>
+    <span class="tag">Empresas e comércios</span>
+  </section>
+
+  <section id="diferenciais" class="secao">
+    <h2>Diferenciais</h2>
+    <span class="tag">Protocolos de limpeza hospitalar</span>
+    <span class="tag">Equipe uniformizada e treinada</span>
+    <span class="tag">Produtos certificados e controlados</span>
+    <span class="tag">Supervisão e relatórios de gestão</span>
+  </section>
+
+  <section id="contato" class="secao">
+    <h2>Contato</h2>
+    <span class="tag">WhatsApp: (19) 99595-5105</span>
+    <span class="tag">E-mail: institutofaciliti@gmail.com</span>
+    <span class="tag">Instagram: @institutofaciliti</span>
+  </section>
+</main>
+
+<a class="whatsapp-float" href="https://wa.me/5519995955105" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<footer>
+  © Instituto Faciliti – Versão Luxo
+</footer>
+
 </body>
-</html>
+        </html>
